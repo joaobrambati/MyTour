@@ -9,6 +9,7 @@ public static class DependencyInjection
     public static IServiceCollection AddInfrastructureDI(this IServiceCollection services)
     {
         services.AddScoped<IAmigoRepository, AmigoRepository>();
+        services.AddScoped<IBandaRepository, BandaRepository>();
 
         return services;
     }
