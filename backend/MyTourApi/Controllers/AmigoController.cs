@@ -51,9 +51,9 @@ public class AmigoController : ControllerBase
     /// </summary>
     /// <returns></returns>
     [HttpPut("atualizaAmigo/{id}")]
-    public async Task<IActionResult> Update(int id, [FromBody] UpdateAmigoDto DTO)
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateAmigoDto dto)
     {
-        return Ok(await _service.Update(id, DTO.Nome));
+        return Ok(await _service.Update(id, dto.Nome));
     }
 
     /// <summary>
